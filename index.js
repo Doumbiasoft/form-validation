@@ -128,7 +128,7 @@ const createErrorsElements = (errors) => {
   const $ul = document.createElement("ul");
   const $errorTitle = document.createElement("label");
   $errorTitle.textContent = errors.length > 1 ? "Errors:" : "Error:";
-  errorDisplay.appendChild($errorTitle);
+  $errorDisplay.appendChild($errorTitle);
   for (let error of errors) {
     const $li = document.createElement("li");
     $li.textContent = error;
@@ -144,7 +144,7 @@ const createSuccessElements = (isSaved, message) => {
   if (isSaved) {
     const success = document.createElement("h3");
     success.textContent = message;
-    successDisplay.appendChild(success);
+    $successDisplay.appendChild(success);
     $successDisplay.style.display = "block";
   } else {
     $successDisplay.innerHTML = "";
